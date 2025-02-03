@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { FiHome, FiBarChart2, FiSettings, FiMenu } from "react-icons/fi";
 
 export default function Sidebar() {
@@ -50,15 +51,15 @@ export default function Sidebar() {
         <ul>
           <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
             <FiHome />{" "}
-            <a href="/" className="text-black">Home</a>
+            <Link href="/" className="text-black">Home</Link>
           </li>
           <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
             <FiBarChart2 />{" "}
-            <a href="/analytics" className="text-black">Analytics</a>
+            <Link href="/analytics" className="text-black">Analytics</Link>
           </li>
           <li className="flex items-center space-x-2 p-2 hover:bg-gray-200 rounded">
             <FiSettings />{" "}
-            <a href="/settings" className="text-black">Settings</a>
+            <Link href="/settings" className="text-black">Settings</Link>
           </li>
         </ul>
       </div>
