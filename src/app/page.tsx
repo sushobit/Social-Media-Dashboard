@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { Line, Pie, Radar, Doughnut } from "react-chartjs-2";
@@ -11,11 +11,11 @@ import "chart.js/auto";
 
 export default function Dashboard() {
   const [data] = useState(dummyData);
-  const [selectedAccount, setSelectedAccount] = useState(null);
+  const [selectedAccount, setSelectedAccount] = useState<(typeof dummyData)[0] | null>(null);
   const router = useRouter();
   const [, setUsername] = useState("");
 
-  const handleViewDetails = (account) => {
+  const handleViewDetails = (account: SetStateAction<(typeof dummyData)[0] | null>) => {
     setSelectedAccount(account);
   };
 
