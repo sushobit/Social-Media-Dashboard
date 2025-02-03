@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { FaSignOutAlt, FaUserAlt } from "react-icons/fa"; 
+import { FaSignOutAlt } from "react-icons/fa"; 
 import Link from 'next/link';
 
 const Header = () => {
