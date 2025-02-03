@@ -20,7 +20,7 @@ ChartJS.register(
 );
 
 const AnalyticsPage = () => {
-  const [data, setData] = useState(dummyData);
+  const [data] = useState(dummyData);
 
   const totalFollowers = data.reduce((sum, account) => sum + account.followers, 0);
 
