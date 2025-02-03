@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { Line, Pie, Radar, Doughnut } from "react-chartjs-2";
@@ -11,7 +10,7 @@ import { useRouter } from "next/navigation";
 import "chart.js/auto";
 
 export default function Dashboard() {
-  const [data, setData] = useState(dummyData);
+  const [data] = useState(dummyData);
   const [selectedAccount, setSelectedAccount] = useState(null);
   const router = useRouter();
   const [username, setUsername] = useState("");
