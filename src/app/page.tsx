@@ -13,7 +13,7 @@ export default function Dashboard() {
   const [data] = useState(dummyData);
   const [selectedAccount, setSelectedAccount] = useState(null);
   const router = useRouter();
-  const [username, setUsername] = useState("");
+  const [, setUsername] = useState("");
 
   const handleViewDetails = (account) => {
     setSelectedAccount(account);
